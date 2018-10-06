@@ -4,6 +4,7 @@ class CreateTools < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.float :price
+      t.string :url
 
       t.timestamps
     end
