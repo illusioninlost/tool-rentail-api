@@ -1,5 +1,6 @@
 require 'pry'
 class ToolsController < ApplicationController
+    skip_before_action :verify_authenticity_token
     before_action :set_tool, only: [:show, :edit, :update, :destroy]
     
     #GET /tools
