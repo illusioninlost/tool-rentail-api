@@ -31,10 +31,8 @@ class ToolsController < ApplicationController
       
       respond_to do |format|
          if @tool.save
-            format.html { redirect_to @tool, notice: 'Tool was successfully created.' }
             format.json { render :show, status: :created, location: @tool }
          else
-            format.html { render :new }
             format.json { render json: @tool.errors, status: :unprocessable_entity }
          end
       end
