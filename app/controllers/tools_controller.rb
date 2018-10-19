@@ -31,6 +31,7 @@ class ToolsController < ApplicationController
       
       respond_to do |format|
          if @tool.save
+            format.html { redirect_to @tool }
             format.json { render :show, status: :created, location: @tool }
          else
             format.json { render json: @tool.errors, status: :unprocessable_entity }
@@ -44,6 +45,7 @@ class ToolsController < ApplicationController
    def update
       respond_to do |format|
          if @tool.update(tool_params)
+            format.html { redirect_to @tool }
             format.json { render :show, status: :ok, location: @tool }
          else
             format.json { render json: @tool.errors, status: :unprocessable_entity }
