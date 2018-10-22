@@ -31,8 +31,8 @@ class ToolsController < ApplicationController
       
       respond_to do |format|
          if @tool.save
-            format.html { redirect_to @tool }
-            format.json { render :show, status: :created, location: @tool }
+            format.html { render json: @tool }
+            format.json { render json: @tool, status: :created, location: @tool }
          else
             format.json { render json: @tool.errors, status: :unprocessable_entity }
          end
@@ -59,7 +59,7 @@ class ToolsController < ApplicationController
    def destroy
       @tool.destroy
          respond_to do |format|
-         format.json { head :no_content }
+         format.json { render json: @tool }
       end
    end
    
