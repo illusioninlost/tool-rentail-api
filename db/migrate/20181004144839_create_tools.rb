@@ -5,6 +5,7 @@ class CreateTools < ActiveRecord::Migration[5.2]
       t.string :description
       t.float :price
       t.string :url
+      t.integer :like
 
       t.timestamps
     end

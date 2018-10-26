@@ -72,6 +72,6 @@ class ToolsController < ApplicationController
    
    # Never trust parameters from the scary internet, only allow the white list through.
    def tool_params
-      params.require(:tool).permit(:name, :description, :price, :url)
+      params.require(:tool).permit(:name, :description, :price, :url, :like)
    end
 end

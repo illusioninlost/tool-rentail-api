@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2018_10_04_144839) do
     t.string "description"
     t.float "price"
     t.string "url"
+    t.integer "like"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
